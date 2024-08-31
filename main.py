@@ -5,7 +5,7 @@ from colorama import Back, Fore, Style
 def run():
 
     # credentials
-    key_path = "E:/VSC Projects/Google Sheets/service_account.json"
+    key_path = "SERVICE ACCOUNT KEY PATH"
     rank = "YOUR RANK"
     username = "YOUR USERNAME"
 
