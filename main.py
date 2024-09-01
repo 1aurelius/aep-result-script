@@ -15,13 +15,7 @@ def run():
         sh = sa.open("RandomProject")
         wks = sh.worksheet("Test")
         print(Fore.GREEN + "Connected to Google Sheets Successfully")
-    except gspread.exceptions.APIError as err:
-        print(err)
-    except gspread.exceptions.GSpreadException as err:
-        print(err)
-    except gspread.exceptions.SpreadsheetNotFound as err:
-        print(err)
-    except gspread.exceptions.WorksheetNotFound as err:
+    except Exception as err:
         print(err)
 
     # finds all wave ends
@@ -29,13 +23,7 @@ def run():
         criteria = re.compile(r'WAVE\s*\d+\s*END')
         cell_list = wks.findall(criteria)
         print(Fore.GREEN + "Fetched Waves Successfully" + Fore.RESET)
-    except gspread.exceptions.APIError as err:
-        print(err)
-    except gspread.exceptions.GSpreadException as err:
-        print(err)
-    except gspread.exceptions.SpreadsheetNotFound as err:
-        print(err)
-    except gspread.exceptions.WorksheetNotFound as err:
+    except Exception as err:
         print(err)
 
     # adds the row number to a list
