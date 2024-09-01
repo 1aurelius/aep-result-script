@@ -1,5 +1,8 @@
 # Cerberus AEP Result Script
 
+[![Made with Python](https://img.shields.io/badge/made_with-python-blue)](https://www.python.org/)
+[![Github Issues](https://img.shields.io/badge/github-issues-green)](https://github.com/1aurelius/aep-result-script/issues)
+
 ## Google API Setup
 A Google Cloud Project is necessary for this project. You can create a project through the [Google Cloud Dashboard](https://console.cloud.google.com/home/dashboard).
 
@@ -45,7 +48,8 @@ The Service Account needs to be added as an editor to the mirror in order to vie
 ![alt text](https://github.com/1aurelius/AEP-Result-Script/blob/main/images/share_with_service_account.png)
 
 ## Configure main.py
-Some variables have to be changed in the python script in order for it to run correctly.
+> [!IMPORTANT]
+> Some variables have to be changed in the python script in order for it to run correctly.
 + Insert the path for your service account key into the `key_path` variable.
 + Insert your rank in the `rank` variable.
 + Insert your username in the `username` variable.
