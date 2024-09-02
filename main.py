@@ -3,12 +3,14 @@ import re
 from colorama import Back, Fore, Style
 
 key_path = "PATH TO SERVICE ACCOUNT KEY" # <-- CHANGE THIS
+spreadsheet_name = 'SPREADSHEET NAME' # <-- CHANGE THIS
+worksheet_name = 'WORKSHEET NAME'  # <-- CHANGE THIS
 
 # google sheets api
 try:
     sa = gspread.service_account(filename=key_path)
-    sh = sa.open("RandomProject")
-    wks = sh.worksheet("Test")
+    sh = sa.open(spreadsheet_name)
+    wks = sh.worksheet(worksheet_name)
     print(Fore.GREEN + "\nConnected to Google Sheets Successfully" + Fore.RESET)
 except gspread.exceptions.SpreadsheetNotFound:
     print(Fore.RED + "A valid spreadsheet was unable to be found, try double checking the spreadsheet name." + Fore.RESET)
